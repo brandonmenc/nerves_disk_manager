@@ -1,21 +1,17 @@
 # NervesDiskManager
 
-**TODO: Add description**
+Monitors and reports changes to the disks attached to a
+[Nerves](https://nerves-project.org/) device.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `nerves_disk_manager` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `nerves_disk_manager` to your list of
+dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:nerves_disk_manager, "~> 0.1.0"}
+    {:nerves_disk_manager, git: "https://github.com/brandonmenc/nerves_disk_manager"}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/nerves_disk_manager](https://hexdocs.pm/nerves_disk_manager).
-

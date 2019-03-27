@@ -1,28 +1,42 @@
 defmodule NervesDiskManager.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :nerves_disk_manager,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      source_url: "https://github.com/brandonmenc/nerves_disk_manager",
+      homepage_url: "https://github.com/brandonmenc/nerves_disk_manager",
+      name: "Nerves Disk Manager",
+      description: """
+      Monitors the disks connected to a Nerves device.
+      """
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {NervesDiskManager.Application, []},
       extra_applications: [:logger]
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Brandon Menc"],
+      licenses: ["Apache-2.0"],
+      links: %{github: "https://github.com/brandonmenc/nerves_disk_manager"}
     ]
   end
 end
